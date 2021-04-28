@@ -1,0 +1,19 @@
+{
+  "name": "senior",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IrfDev/senior-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IrfDev/senior-js/issues"
+  },
+  "homepage": "https://github.com/IrfDev/senior-js#readme"
+}
