@@ -54,41 +54,21 @@ The output should have some scss processing, some file processing and a module w
 
   
   
-## WebPack plugin:  
+## Promises:  
+- Base Url: https://swapi.dev/api/
+- Create a function that returns the planets (/planets) who had been appear in at least two movies and who residents (/people) have reptiles  (/species)
 
-Create Webpack config to process scss, at least on node_module (can be GSAP, lodash, axios , custom ES6 module, etc) and an Index.html page.
+It only needs to be in one function and it needs to deal with at least two Promises
 
-Create a Webpack plugin to *console.log()* the name of the assets in the final dist directory, based on the done hook.
+Extra point if you return an arrray of Promises, complete Promise for planets with the above conditions
 
-Extra points if you push the package to NPM.
+Documentation: 
+Planets: https://swapi.dev/documentation#planets
+People: https://swapi.dev/documentation#people
+Species: https://swapi.dev/documentation#species
 
   
   
 ### Answer: 
-Is actually pretty easy to make, but it required to have a preavious understanding on: ES6 Modules, async functions, callbacks and WebPack. Also have a good reading docs skills.
-
-  
-`
-    class  interviewPlugin {
-    
-	    apply(compiler) {
-    
-		    compiler.hooks.done.tapAsync("interviewPlugin", (stats, cb) => {
-    
-			    const  assetNames  = [];
-    
-			    for (assetName  in  stats.compilation.assets) {
-    
-				    assetNames.push(assetName);
-    
-			    }
-    
-			    console.log("Assets Names: ", assetNames.join(""));
-    
-			    cb();
-    
-		    });
-    
-	    }  
-    }  
-`
+You just need to call the api three times to populate people and species then you have to filter the array by the conditions above. 
+For the extra point, you need to wrap part of your functions in a Promise.all()
